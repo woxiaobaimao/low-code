@@ -1,18 +1,21 @@
 <script lang="ts" setup>
-import Editor from "./views/editor.jsx";
-import data from "./data/data.json";
+import Scene from "./components/Scene.vue";
+import BigScreen from "./components/BigScreen.vue";
+// import { onMounted, reactive, watch, computed, ref } from "vue";
+// import { getSmartCityInfo, getSmartCityList } from "@/api/api";
+// import gsap from "gsap";
 </script>
-<style lang="scss" scoped>
-.app {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-}
-</style>
 <template>
-  <div id="app" class="app">
-    <Editor :data="data"></Editor>
+  <div class="home">
+    <Scene></Scene>
+    <BigScreen></BigScreen>
   </div>
 </template>
+<style>
+html {
+  font-size: calc(100vw / 19.2);
+}
+body {
+  font-size: 16px;
+}
+</style>
